@@ -1,6 +1,7 @@
-import os, sys, ipaddress
-from datetime import datetime, timedelta
-"""Create X509 Certificate: this is a document or dataset that is signed by the originator that provides a credential that is as trustworthy as 
+
+"""The first, big part of this code is Simon Davy's code. It is open source and generates certificates. The best way to do Digital Identification is to 
+use asymmetric, public key, encryption. This program does that, and I am just providing the tiny interface. For optimal use, you'll
+need good Mersenne primes. Create X509 Certificate: this is a document or dataset that is signed by the originator that provides a credential that is as trustworthy as 
 the person who created said document. It is like a digital seal/stamp or signature.The originator makes the certificate. The certificate goes to the user. The certificate contains a signature that encrypts the private side 
 of asymmetric encryption such as RSA, which means that you need a different key to decrypt than to encrypt. The creator makes half of the key public.The first step is to get a certificate source that you can trust"""
 
@@ -30,7 +31,8 @@ of asymmetric encryption such as RSA, which means that you need a different key 
 # Caveat emptor
 #
 
-
+import os, sys, ipaddress
+from datetime import datetime, timedelta
 
 def generate_selfsigned_cert(hostname, ip_addresses=None, key=None):
     """Generates self signed certificate for a hostname, and optional IP addresses."""
