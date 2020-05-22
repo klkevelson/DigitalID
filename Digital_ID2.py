@@ -93,7 +93,7 @@ def generate_selfsigned_cert(hostname, ip_addresses=None, key=None):
 
     return cert_pem, key_pem
 
-
+#My code begins below.
 def main(): 
     print("Beginning Digital ID Program")
     hostname = input("Enter Host Name: ")
